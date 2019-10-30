@@ -9,6 +9,7 @@ uses
 type
   TFormMain = class(TForm)
     btnHola: TButton;
+    Label1: TLabel;
     procedure btnHolaClick(Sender: TObject);
   private
     { Private declarations }
