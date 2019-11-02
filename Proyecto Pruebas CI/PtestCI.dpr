@@ -2,7 +2,8 @@ program PtestCI;
 
 uses
   Vcl.Forms,
-  FMain in 'FMain.pas' {FormMain};
+  FMain in 'FMain.pas' {FormMain},
+  uFunciones in 'uFunciones.pas';
 
 {$R *.res}
 
