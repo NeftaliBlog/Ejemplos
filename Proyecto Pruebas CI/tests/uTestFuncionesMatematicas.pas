@@ -7,13 +7,12 @@ uses
 type
 
   [TestFixture]
-  TTestMathFunctions = class(TObject) 
+  TTestMathFunctions = class(TObject)
   public
     [Setup]
     procedure Setup;
     [TearDown]
     procedure TearDown;
-
     // Test para la función de suma
     [Test]
     [TestCase('Test suma positivos','3,2,5')]
@@ -22,16 +21,16 @@ type
     [TestCase('Test suma con cero','3,0,3')]
     [TestCase('Test suma con ceros','0,0,0')]
     [TestCase('Test suma cifras incorrectas','AA,BB,0')]
-    procedure TestFunctionSuma(const AValue1:Integer; const AValue2:Integer; AResult:integer);
-
+    procedure TestFunctionSuma(const AValue1:Integer;
+                               const AValue2:Integer; AResult:integer);
     // Test para la función de division
     [Test]
     [TestCase('Test Dividir con resto entero','10,2,5')]
     [TestCase('Test Dividir con resto decimal','9,2,4.5')]
     [TestCase('Test Dividir por cero','9,0,0')]
-    procedure TestFunctionDivision(const AValue1:Integer; const AValue2:Integer; AResult:double);
-
-
+    procedure TestFunctionDivision(const AValue1:Integer;
+                                   const AValue2:Integer; AResult:double);
+    //...
   end;
 
 implementation
