@@ -25,5 +25,12 @@ pipeline {
                 bat '"c:\\Proyectos\\Proyecto Pruebas CI\\tests\\compilar.bat"'
             }
         }
+        stage('Ejecutar test unitarios') {
+            steps {
+                //-- Ejecutar test unitarios
+                echo 'Ejecutar test unitarios'
+                bat '"c:\\Proyectos\\Proyecto Pruebas CI\\tests\\ejecutar.bat" RELEASE'
+            }
+        }        
     }
 }
