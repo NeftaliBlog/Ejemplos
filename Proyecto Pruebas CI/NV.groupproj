@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{620E9724-6B04-45DE-B410-82E5F17A987B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="PtestCI.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="tests\PTestFunciones.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="PtestCI">
+        <MSBuild Projects="PtestCI.dproj"/>
+    </Target>
+    <Target Name="PtestCI:Clean">
+        <MSBuild Projects="PtestCI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PtestCI:Make">
+        <MSBuild Projects="PtestCI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PTestFunciones">
+        <MSBuild Projects="tests\PTestFunciones.dproj"/>
+    </Target>
+    <Target Name="PTestFunciones:Clean">
+        <MSBuild Projects="tests\PTestFunciones.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PTestFunciones:Make">
+        <MSBuild Projects="tests\PTestFunciones.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="PtestCI;PTestFunciones"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="PtestCI:Clean;PTestFunciones:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="PtestCI:Make;PTestFunciones:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
