@@ -26,7 +26,7 @@ type
     // Test para la función de division
     [Test]
     [TestCase('Test Dividir con resto entero','10,2,5')]
-    [TestCase('Test Dividir con resto decimal','999,2,4.5')]
+    [TestCase('Test Dividir con resto decimal','9,2,4.5')]
     [TestCase('Test Dividir por cero','9,0,0')]
     procedure TestFunctionDivision(const AValue1:Integer;
                                    const AValue2:Integer; AResult:double);
