@@ -15,7 +15,6 @@ goto BUILD
 :PROGRAMFILES
 echo "Llamando a rsvars"
 call "c:\Program Files\Embarcadero\Studio\20.0\bin\rsvars.bat" 
-REM realizar el Build del proyecto
 
 :BUILD
-msbuild.exe /nologo /v:m /t:build /p:Config=Release "c:\PROYECTOS\Proyecto Pruebas CI\tests\PTestFunciones.dproj"
+msbuild.exe /nologo /v:m /t:build /p:Config=Release "PTestFunciones.dproj"

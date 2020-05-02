@@ -9,8 +9,6 @@ type
   protected
     { protected declarations }
   public
-    { public declarations }
-  published
     class function Suma(x,y:integer):integer;
     class function Resta(x,y:integer):integer;
     class function Multiplicacion(x,y:integer):integer;

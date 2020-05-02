@@ -8,11 +8,11 @@ REM Si el parámetro es DEBUG
 goto DEBUG
 
 :RELEASE
-call "c:\PROYECTOS\Proyecto Pruebas CI\tests\Win32\Release\PTestFunciones.exe"
+call "c:\PROYECTOS\Proyecto Pruebas CI\tests\PTestFunciones.exe"
 goto SALIR
 
 :DEBUG
-call "c:\PROYECTOS\Proyecto Pruebas CI\tests\Win32\Debug\PTestFunciones.exe"
+call "c:\PROYECTOS\Proyecto Pruebas CI\tests\PTestFunciones.exe"
 
 REM finalizar
 :SALIR
